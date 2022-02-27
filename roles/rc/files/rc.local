@@ -1,0 +1,13 @@
+#!/bin/sh -e
+#
+# rc.local -- Added for compatibility with systemd
+#
+# Enable with:
+#
+# $ systemctl unmask rc-local
+# $ systemctl enable rc-local
+# $ systemctl start rc-local
+#
+
+exit 0
+
