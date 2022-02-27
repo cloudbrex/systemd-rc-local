@@ -12,6 +12,8 @@
 systemctl stop systemd-hostnamed
 systemctl start systemd-hostnamed
 
+sleep 10s
+
 echo "The $HOSTNAME server has started" 
 
 exit 0
