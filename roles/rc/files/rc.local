@@ -12,7 +12,7 @@
 systemctl stop systemd-hostnamed
 systemctl start systemd-hostnamed
 
-echo "The $HOSTNAME server has started" | mail -s "[$HOSTNAME] start up" build@vpsnest.com
+echo "The $HOSTNAME server has started" 
 
 exit 0
 
