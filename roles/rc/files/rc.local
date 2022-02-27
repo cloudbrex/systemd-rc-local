@@ -8,6 +8,16 @@
 # $ systemctl enable rc-local
 # $ systemctl start rc-local
 #
+echo "cloning repo with Wordpress Playbook"
+git clone https://github.com/cloudbrex/lempstackautomation.git /tmp/app 2>&1
+
+echo "install the dependent roles and collections"
+cd /tmp/app
+ansible-galaxy install -r requirements.yml
+
+echo "run ansible-playbook"
+cd /tmp/app
+ansible-playbook -become -i inventory setup.yml -b 2>&1
 
 exit 0
 
