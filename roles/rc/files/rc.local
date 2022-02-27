@@ -7,13 +7,10 @@
 # $ systemctl unmask rc-local
 # $ systemctl enable rc-local
 # $ systemctl start rc-local
-#
-set -e
 
-while true; do
-    systemctl stop systemd-hostnamed
-    systemctl start systemd-hostnamed
-done
+
+systemctl stop systemd-hostnamed
+systemctl start systemd-hostnamed
 
 echo "The $HOSTNAME server has started" | mail -s "[$HOSTNAME] start up" build@vpsnest.com
 
